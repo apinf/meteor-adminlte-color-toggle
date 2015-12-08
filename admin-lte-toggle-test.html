@@ -1,0 +1,70 @@
+<head>
+  <title>AdminLTE Toggle Menu</title>
+</head>
+
+<body>
+  <div id="dashboard">
+  {{> nav }}
+  {{> sidebar }}
+  </div>
+</body>
+
+<template name="nav">
+  <header class="main-header">
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <li>
+            <div class="form-group">
+              <select name="select" id="color-select" class="pull-right form-control">
+                <option value="skin-black-light">Black Light</option>
+                <option value="skin-black">Black</option>
+                <option value="skin-blue-light">Blue Light</option>
+                <option value="skin-blue" selected>Blue</option>
+                <option value="skin-green-light">Green Light</option>
+                <option value="skin-green">Green</option>
+                <option value="skin-purple-light">Purple Light</option>
+                <option value="skin-purple">Purple</option>
+                <option value="skin-red-light">Red Light</option>
+                <option value="skin-red">Red</option>
+                <option value="skin-yellow-light">Yellow Light</option>
+                <option value="skin-yellow">Yellow</option>
+              </select>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+</template>
+
+<template name="sidebar">
+  <aside class="main-sidebar sidebar-mini">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section style="height: auto;" class="sidebar">
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input name="q" class="form-control" placeholder="Search..." type="text">
+              <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <ul class="sidebar-menu">
+        <li class="header">MAIN NAVIGATION</li>
+        <li>
+          <a href="#">
+            <i class="fa fa-th"></i> <span>Widgets</span>
+            <small class="label pull-right bg-green">new</small>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </aside>
+</template>
